@@ -1,0 +1,21 @@
+2016-06-29 15:51:38 ERROR  : ERROR:  relation "columns" does not exist
+LINE 1: insert into columns (code) values ('PHP')
+                    ^
+2016-06-29 15:53:36 ERROR  : ERROR:  syntax error at or near "select"
+LINE 5: select * from currency;
+        ^
+2016-06-29 15:57:08 ERROR  : ERROR:  syntax error at or near "UNIQUE"
+LINE 1: ALTER TABLE public.currency ALTER COLUMN code SET UNIQUE;
+                                                          ^
+2016-06-29 15:57:14 ERROR  : ERROR:  syntax error at or near "UNIQUE"
+LINE 1: ALTER TABLE public.currency ALTER COLUMN code UNIQUE;
+                                                      ^
+2016-06-29 15:58:56 ERROR  : ERROR:  duplicate key value violates unique constraint "currency_code_key"
+DETAIL:  Key (code)=(PHP) already exists.
+2016-06-29 15:59:44 ERROR  : ERROR:  column "enabled" is of type boolean but expression is of type integer
+LINE 1: insert into currency (code, enabled) values ('USD', 0)
+                                                            ^
+HINT:  You will need to rewrite or cast the expression.
+2016-06-29 15:59:54 ERROR  : ERROR:  column "falese" does not exist
+LINE 1: insert into currency (code, enabled) values ('USD', falese)
+                                                            ^
